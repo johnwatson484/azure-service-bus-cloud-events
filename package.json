@@ -1,0 +1,24 @@
+{
+  "name": "azure-service-bus-cloud-events",
+  "version": "1.0.0",
+  "description": "POC mapping Cloud Events to Azure Service Bus specification",
+  "main": "app/index.js",
+  "scripts": {
+    "start": "node app/index.js",
+    "start:watch": "nodemon --inspect=0.0.0.0 --ext css,js,njk --legacy-watch app/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnwatson484/azure-service-bus-cloud-events.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnwatson484/azure-service-bus-cloud-events/issues"
+  },
+  "homepage": "https://github.com/johnwatson484/azure-service-bus-cloud-events#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.5",
+    "standard": "^14.3.4"
+  }
+}

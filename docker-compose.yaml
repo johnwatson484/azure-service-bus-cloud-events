@@ -1,0 +1,6 @@
+version: '3.7'
+services:
+  service-bus-events:
+    build: .
+    image: service-bus-events
+    container_name: service-bus-events
