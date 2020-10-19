@@ -1,5 +1,5 @@
 # Development
-FROM node:12.16.0-alpine AS development
+FROM node:14.14.0-alpine AS development
 ENV NODE_ENV development
 EXPOSE 9229
 # Set global npm dependencies to be stored under the node user directory

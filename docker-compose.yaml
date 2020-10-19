@@ -4,3 +4,8 @@ services:
     build: .
     image: service-bus-events
     container_name: service-bus-events
+    environment:
+      AZURE_SERVICE_BUS_HOST: ${AZURE_SERVICE_BUS_HOST}
+      AZURE_SERVICE_BUS_USERNAME: ${AZURE_SERVICE_BUS_USERNAME}
+      AZURE_SERVICE_BUS_PASSWORD: ${AZURE_SERVICE_BUS_PASSWORD}
+      AZURE_SERVICE_BUS_ADDRESS: ${AZURE_SERVICE_BUS_ADDRESS}
