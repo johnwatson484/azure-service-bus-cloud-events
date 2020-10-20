@@ -4,11 +4,22 @@ class MessageBase {
   constructor (name, config) {
     this.name = name
     this.sbClient = ServiceBusClient.createFromConnectionString(`Endpoint=sb://${config.host}/;SharedAccessKeyName=${config.username};SharedAccessKey=${config.password}`)
-    this.queueClient = this.sbClient.createQueueClient(config.address)
+    this.entityClient = this.createEntityClient(config)
+  }
+
+  createEntityClient (config) {
+    switch (config.type) {
+      case 'queue':
+        return this.sbClient.createQueueClient(config.address)
+      case 'topic':
+        return this.sbClient.createTopicClient(config.address)
+      case 'subscription':
+        return this.sbClient.createSubscriptionClient(config.topic, config.address)
+    }
   }
 
   async closeConnection () {
-    await this.queueClient.close()
+    await this.entityClient.close()
     await this.sbClient.close()
     console.log(`${this.name} connection closed`)
   }

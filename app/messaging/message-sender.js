@@ -7,7 +7,7 @@ class MessageSender extends MessageBase {
   }
 
   async sendMessage (message) {
-    const sender = this.queueClient.createSender()
+    const sender = this.entityClient.createSender()
     try {
       console.log(`${this.name} sending message`)
       await sender.send({ body: message })
