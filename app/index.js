@@ -18,8 +18,8 @@
   await queueReceiver.closeConnection()
 
   // send to topic and receive from subscription
-  const subscriptionReceiver = new MessageReceiver('queue-receiver', config.subscriptionConfig, messageAction)
-  const topicSender = new MessageSender('queue-sender', config.topicConfig)
+  const subscriptionReceiver = new MessageReceiver('topic-receiver', config.subscriptionConfig, messageAction)
+  const topicSender = new MessageSender('topic-sender', config.topicConfig)
   await topicSender.sendMessage(message)
   await topicSender.closeConnection()
   await subscriptionReceiver.closeConnection()
