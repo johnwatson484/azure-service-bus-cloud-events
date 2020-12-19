@@ -5,7 +5,7 @@
 
   const message = {
     body: 'hello world',
-    customProperties: {
+    applicationProperties: {
       customType: 'my custom type'
     }
   }

@@ -22,6 +22,6 @@
     "standard": "^14.3.4"
   },
   "dependencies": {
-    "@azure/service-bus": "^1.1.10"
+    "@azure/service-bus": "^7.0.0"
   }
 }
